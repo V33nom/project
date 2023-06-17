@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>contact us page</title>
+   <link rel="stylesheet" href="C:\Users\admin\Desktop\my-html\contactus.css">
+</head>
+<body>
+   <div class="grid-container">
+      <div class="contact-parent">
+         <div class="contact-child child1">
+            <p>
+               <i class="fas fa-map-marker-alt"></i> Address <br />
+               <span> moregaon virar-mumbai(401209)
+               <br />
+               maharashtra,india.
+               </span>
+            </p>
+            <p>
+               <i class="fas fa-phone-alt"></i> Let's Talk <br />
+               <span> ************</span>
+            </p>
+            <p>
+               <i class=" far fa-envelope"></i> General Support <br />
+               <span>contact@example.com</span>
+            </p>
+         </div>
+         <div class="contact-child child2">
+            <div class="inside-contact">
+               <h2>Contact Us</h2>
+               <h3>
+                  <span id="confirm">
+               </h3>
+               <form>
+               <p>Name *</p>
+               <input type="txt_name" type="text" size="15" Required="required" style="width:50%" size="20">
+               <p>Email *</p>
+               <input type="txt_email" type="text"  Required="required" style="width:50%" onfocus="verifyName(this.form)">
+               <p>Phone *</p>
+               <input type="txt_phone" type="text" Required="required" style="width: 50%;" size="10" onfocus="verifyEmail(this.form)">
+               <p>Subject *</p>
+               <input type="txt_subject" type="text"  Required="required" style="width: 50%;" onfocus="verifyPhone(this.form)">
+               <p>Message *</p>
+               <textarea id="txt_message" rows="4" cols="20" Required="required" style="width: 60%;" onfocus="verifySubject(this.form)"></textarea>
+               <input type="submit" id="btn_send" value="SEND">
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+<script type="text/javascript">
+   function verifyName(form){
+      var msg;
+      var val=form.Name.value;
+      if(val==""){
+          msg="please enter your name";
+          alert(msg);
+          form.name.focus();
+      }
+  }
+  
+  function verifyPhone(form){
+      var msg;
+      var val=form.phone.value;
+      if(val=="||val.length,10"){
+          msg="please enter your phone number";
+          alert(msg);
+          form.phone.focus();
+      }
+       if(isNaN(val)){
+          msg="ypur phone no should be numeric only";
+          alert(msg);
+          form.phone.focus();
+       }
+  }
+  
+  function verifyEmail(form){
+      var msg;
+      var val=form.email.value;
+      if(val==""){
+          msg="please enter your email";
+          alert(msg);
+          form.email.focus();
+      }
+  }
+  
+  function verifySubject(form){
+      var msg;
+      var val=form.Subject.value;
+      if(val==""){
+          msg="please enter the subjectt you have query about";
+          alert(msg);
+          form.Subject.focus();
+      }
+  }
+</script>
+</body>
+</html>

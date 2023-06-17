@@ -1,0 +1,45 @@
+.flex-container {
+    display: flex;
+    align-items: center;
+   }
+
+   .flex-container div{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:50%;
+    height: 59%;
+    text-align: center;
+    font-family:arial;
+    justify-content: center;
+    position: sticky;
+   }
+
+   .flex-container div:hover{
+    transition: 2s ease-in-out;
+    background-color:darkgrey;
+   }
+
+  .flex-container > div{
+     margin: 20px;
+     padding: 20px;
+    font-size: 20px;}
+
+
+    .flex-container button{
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .flex-container button:hover{
+        opacity: 0.7;
+    }
+
+    body {
+        padding: 20px;
+        background-color: lightblue;}
